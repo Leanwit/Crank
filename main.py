@@ -1,6 +1,10 @@
 from model.Documento import *
 from controller.ModelController import *
+from controller.CrankController import *
 
 unModelController = ModelController()
 unModelController.lectura_archivo('FilesUpload/documentos.csv')
-# unModelController.getInlink("http://www.thehealthstore.co.nz/en/c/Herbal_Tea")
+
+unCrankController = CrankController("Tea Herbal Quality")
+unCrankController.calcularScoreRelevance()
+unCrankController.calcularScoreContribution()

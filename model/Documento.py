@@ -10,4 +10,9 @@ class Documento(db.Entity):
     archivo = Optional(str)
     Target = Set('Documento', reverse='Target')
 
+    #atributos no persistidos
+    scoreRelevance = 0
+    scoreContribution = 0
+    scoreFinal = 0
+
 obtenerCredenciales(db)
