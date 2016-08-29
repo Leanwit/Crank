@@ -5,10 +5,9 @@ db = Database()
 
 
 class Documento(db.Entity):
-    id = Required(int)
+    id = PrimaryKey(int,auto=True)
     url = Required(str)
-    archivo = Required(str)
+    archivo = Optional(str)
     Target = Set('Documento', reverse='Target')
-    PrimaryKey(id, url)
 
 obtenerCredenciales(db)
