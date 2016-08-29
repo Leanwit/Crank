@@ -1,5 +1,5 @@
 from pony.orm import *
-
+from settings_db import *
 
 db = Database()
 
@@ -11,7 +11,4 @@ class Documento(db.Entity):
     Target = Set('Documento', reverse='Target')
     PrimaryKey(id, url)
 
-
-import settings_db
-
-db.generate_mapping(create_tables=True)
+obtenerCredenciales(db)

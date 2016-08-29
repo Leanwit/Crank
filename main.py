@@ -1,4 +1,2 @@
 from model.Documento import *
-
-
-print "Hello"
+from controller.BaseDatosController import *
