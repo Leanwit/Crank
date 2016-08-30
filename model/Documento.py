@@ -7,12 +7,11 @@ db = Database()
 class Documento(db.Entity):
     id = PrimaryKey(int,auto=True)
     url = Required(str)
-    archivo = Optional(str)
     Target = Set('Documento', reverse='Target')
+    # Atributos persistidos pero propios de cada corrida del algoritmo.
+    scoreRelevance = Optional(float)
+    scoreContribution = Optional(float)
+    scoreFinal = Optional(float)
 
-    #atributos no persistidos
-    scoreRelevance = 0
-    scoreContribution = 0
-    scoreFinal = 0
 
 obtenerCredenciales(db)

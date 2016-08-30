@@ -2,3 +2,5 @@ model/settings_db.py
 FilesDownload/
 FilesUpload/
 *.pyc
+.tags
+.tags*
